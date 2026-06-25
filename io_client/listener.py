@@ -5,7 +5,7 @@ import collections
 from faster_whisper import WhisperModel
 from .noise import noise_cleaning
 
-model = WhisperModel("large-v3", device="cuda", compute_type="float16")
+model = WhisperModel("large-v3-turbo", device="cuda", compute_type="int8_float16")
 
 def auto_listening(
     sample_rate=16000,
@@ -55,17 +55,14 @@ def auto_listening(
 
 def transcribe(audio):
     audio = noise_cleaning(audio) # Pulisce audio dal rumore di fondo
+    
     segments, _ = model.transcribe(
         audio,
         language="it",
-        beam_size=10,               # più alto = più accurato ma lento
-        best_of=5,                  # prova 5 candidati e prende il migliore
+        beam_size=3,               # più alto = più accurato ma lento
+        best_of=1,                  # prova 5 candidati e prende il migliore
         temperature=0.0,            # 0 = deterministico, meno allucinazioni
         condition_on_previous_text=False,  # evita che inventi parole basandosi sul contesto precedente
-        vad_filter=True,
-        vad_parameters=dict(
-            min_silence_duration_ms=300,
-            speech_pad_ms=200       # aggiunge un po' di audio prima/dopo il parlato
-        )
+        vad_filter=False
     )
     return " ".join([seg.text for seg in segments]).strip()

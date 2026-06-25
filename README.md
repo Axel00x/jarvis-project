@@ -1,20 +1,28 @@
 # Librerie chiave per ogni funzionalità
 
-## Input vocale / output voce
+## Lingue disponibili x TTS (IT)
+
+- it-IT-DiegoNeural                  Male      General                Friendly, Positive
+- it-IT-ElsaNeural                   Female    General                Friendly, Positive
+- it-IT-GiuseppeMultilingualNeural   Male      General                Friendly, Positive (**Raccomandato**)
+- it-IT-IsabellaNeural               Female    General                Friendly, Positive
+
+### Input vocale / output voce
 
 - `SpeechRecognition` + `PyAudio` — riconoscimento vocale (Google STT gratuito)
 - `edge-tts` — voce sintetica di alta qualità (voci Microsoft, gratis)
 - `pyttsx3` — TTS offline, più semplice ma qualità inferiore
 - `faster-whisper` — STT locale molto accurato (OpenAI Whisper ottimizzato)
+- `pygame` — Semplice, riproduce file .mp3
 
-## Automazione del PC
+### Automazione del PC
 
 - `pyautogui` — controlla mouse, tastiera, screenshot
 - `subprocess` — apre programmi, esegue comandi di sistema
 - `keyboard` / `pynput` — hotkey globali (es. tieni premuto un tasto per parlare)
 - `pygetwindow` — gestisce le finestre aperte
 
-## Web e informazioni
+### Web e informazioni
 
 - `webbrowser` — apre URL nel browser
 - `requests` / `httpx` — chiamate HTTP
@@ -22,14 +30,14 @@
 - `newsapi-python` — notizie (API gratuita disponibile)
 - `googlesearch-python` — ricerche Google
 
-## File e applicazioni
+### File e applicazioni
 
 - `python-docx` — crea/modifica Word
 - `openpyxl` — Excel
 - `os` / `pathlib` — gestione file system
 - `pyperclip` — copia/incolla negli appunti
 
-## AI e orchestrazione
+### AI e orchestrazione
 
 - `openai` (SDK, funziona anche con Groq/Ollama) — chiamate LLM
 - `langchain` — orchestrazione avanzata, memoria, tool calling

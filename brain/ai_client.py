@@ -8,7 +8,7 @@ def call_gemini_api(prompt):
         model="gemini-3.1-flash-lite",
         contents=prompt,
         config=types.GenerateContentConfig(
-            system_instruction="You are Jarvis, a helpful assistant. You will answer the user's questions very briefly."
+            system_instruction="You are Jarvis, a helpful voice assistant. You will answer the user's questions very concisely, in a friendly yet formal tone"
         )
     )
             
