@@ -3,6 +3,7 @@ from io_client import auto_listening, transcribe, tts
 from brain import call_gemini_api
 
 if __name__ == "__main__":
+    
     while True:
         audio = auto_listening()
         if audio is not None:
