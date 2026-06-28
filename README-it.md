@@ -1,60 +1,60 @@
 # Jarvis Project
 
-## Information
+## Informazioni
 
-The Jarvis Project is a voice-activated AI capable of helping you with all kinds of daily tasks. Jarvis can open apps, write text, open websites, perform searches, and, of course, answer your questions.
-New updates will bring new features and general improvements to Jarvis.
+Il progetto Jarvis è un'AI vocale in grado di aiutarti nelle task giornaliere di qualsiasi tipo. Jarvis è in grado di aprire applicazioni, scrivere testi, aprire siti, fare ricerche e ovviamente rispondere alle tue domande.
+Nuovi aggiornamenti porteranno nuove funzioni e migliorie generali a Jarvis.
 
-## How does it work?
+## Come funziona?
 
-### Basic Concept
+### Idea di base
 
 ```text
-User: “Open YouTube”
+Utente: "Apri YouTube"
             │
             ▼
 ┌──────────────────────┐
-│  AI receives message │
-│  + list of tools     │
+│  AI riceve messaggio │
+│  + lista tool        │
 └────────┬─────────────┘
          │
-         │ decides to use “open_browser”
+         │ decide di usare "open_browser"
          │
          ▼
 ┌──────────────────────────────────────┐
-│  Responds with:                      │
+│  Risponde con:                       │
 │  tool_call: open_browser             │
-│  args: { url: “https://youtube.com”} │
+│  args: { url: "https://youtube.com"} │
 └────────┬─────────────────────────────┘
          │
          ▼
 ┌───────────────────────┐
-│  Python executes      │
+│  Python esegue        │
 │  webbrowser.open(url) │
-│  → browser opens      │
+│  → browser si apre    │
 └────────┬──────────────┘
          │
-         │ result: “Browser open”
+         │ risultato: "Browser aperto"
          │
          ▼
 ┌──────────────────────┐
-│  AI receives result  │
-│  formulates response │
+│  AI riceve risultato │
+│  formula risposta    │
 └────────┬─────────────┘
          │
          ▼
-Jarvis: “Done! I opened YouTube.”
+Jarvis: "Fatto! Ho aperto YouTube."
 ```
 
-Jarvis is activated via voice command and executes the instructions given verbally.
+Jarvis viene attivato tramite comando vocale ed esegue le istruzioni date a voce.
 
-## Installation
+## Installazione
 
-There are currently no executable binary files available.
+Al momento non sono presenti file binari eseguibili.
 
-Until the program is released, you can run the **source code** by downloading the necessary requirements to run the program:
+Fino al momento della distribuzione è possibile eseguire il **codice sorgente** scaricando i requisiti necessari per far funzionare il programma:
 
-1. Clone the repository:
+1. Clona il repository:
 
     ```bash
     git clone https://github.com/Axel00x/jarvis-project
@@ -62,13 +62,13 @@ Until the program is released, you can run the **source code** by downloading th
     cd jarvis-project
     ```
 
-2. Install the dependencies:
+2. Installa i requisiti:
 
     ```bash
     pip install -r requirements.txt
     ```
 
-3. Run the program:
+3. Esegui il programma:
 
     ```bash
     python main.py

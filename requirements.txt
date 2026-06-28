@@ -1,0 +1,11 @@
+docx==0.2.4
+edge_tts==7.2.8
+faster_whisper==1.2.1
+noisereduce==3.0.3
+numpy==2.5.0
+protobuf==7.35.1
+pygame==2.6.1
+python_docx==1.2.0
+Requests==2.34.2
+sounddevice==0.5.1
+webrtcvad==2.0.10
